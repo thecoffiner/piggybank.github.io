@@ -1,0 +1,356 @@
+*{
+  background-color: rgg(255,255,255);
+  box-sizing: content-box;
+  font-family: Georgia;
+}
+
+body {
+    background-color: white;
+}
+
+.grid-container{
+  display:grid;
+  grid-template-areas:  'Declaration Declaration Declaration Declaration Declaration Declaration '
+                        'addIncome addIncome addIncome addExpense addExpense addExpense '
+                        'addIncome addIncome addIncome addExpense addExpense addExpense '
+                        'loggedSalary loggedPocket loggedOtherInc loggedTransport loggedVictuals  loggedOtherExp ';
+  height: 100%;
+  border:solid;
+  border-width: medium;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-gap: 0.2em;
+  background-color:rgb(56,109,177);
+  width: 100%;
+  grid-template-columns: 16.5% 16.5% 16.5% 16.5% 16.5% 16.3%;
+
+
+}
+
+
+.Declaration{
+  font-size: 1.4em;
+  display: block;
+  border:solid;
+  border-width: medium;
+  grid-area: Declaration;
+  text-align: center;
+  background-color: rgb(56,109,177);
+  background-image: url('http://icons.iconarchive.com/icons/rockettheme/ecommerce/256/piggy-bank-icon.png');
+  background-size: 12%;
+  background-repeat: no-repeat ;
+  background-position: center;
+  color:white;
+  font-weight: bold;
+  border-color:rgb(56,109,177);
+  text-shadow: 1px 1px #ff0000;
+}
+
+.addBtnInc{
+  color:white;
+  background-color: green;
+  text-align: right;
+  font-size: 0.95em;
+  background-color:#53c653;
+}
+
+.addBtnExp{
+  color:white;
+  background-color:#ff4d4d;
+  font-size: 0.95em;
+}
+
+
+.addIncome{
+    position: relative;
+    text-align:right;
+    display: inline-block;
+    grid-area: addIncome;
+    border:solid;
+    border-width: 0.01em;
+    font-size: 0.95em;
+    background-color: white;
+}
+
+.addExpense{
+    position: relative;
+    display: inline-block;
+    grid-area: addExpense;
+    border:solid;
+    border-width: 0.01em;
+    font-size: 0.95em;
+    background-color: white;
+}
+
+.loggedTransport{
+  position: relative;
+  display: inline-block;
+  grid-area: loggedTransport;
+  border:solid;
+  border-width: 0.01em;
+  font-size: 0.95em;
+  background-color: #ff4d4d;
+}
+
+.loggedVictuals{
+  position: relative;
+  display: inline-block;
+  grid-area: loggedVictuals;
+  border:solid;
+  border-width: 0.01em;
+  font-size: 0.95em;
+  background-color: #ff4d4d;
+}
+
+.loggedOtherExp{
+  position: relative;
+  display: inline-block;
+  grid-area: loggedOtherExp;
+  border:solid;
+  border-width: 0.01em;
+  font-size: 0.95em;
+  background-color: #ff4d4d;
+}
+
+.loggedSalary{
+  position: relative;
+  display: inline-block;
+  grid-area: loggedSalary;
+  border:solid;
+  border-width: 0.01em;
+  font-size: 0.95em;
+  background-color:#53c653;
+}
+
+.loggedPocket{
+  position: relative;
+  display: inline-block;
+  grid-area: loggedPocket;
+  border:solid;
+  border-width: 0.01em;
+  font-size: 0.95em;
+  background-color:#53c653;
+}
+
+.loggedOtherInc{
+  position: relative;
+  display: inline-block;
+  grid-area: loggedOtherInc;
+  border:solid;
+  border-width: 0.01em;
+  font-size: 0.95em;
+  background-color:#53c653;
+}
+
+.dropdown-inc{
+  display: none;
+  position: relative;
+  text-align: right;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 0.95em;
+}
+
+.showinc{
+  display:block;
+  position: relative;
+  text-align: right;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 0.95em;
+}
+
+.dropdown-exp{
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 0.95em;
+}
+
+.showexp{
+  display:block;
+  position: relative;
+  text-align: left;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 0.95em;
+}
+
+.transInput{
+  display: none;
+}
+.showtrans{
+  display: block;
+  font-size: 0.95em;
+}
+
+.victualsInput{
+  display: none;
+}
+.showVictuals{
+  display: block;
+  font-size: 0.95em;
+}
+
+.otherExpInput{
+  display: none;
+}
+.showOtherExp{
+  display: block;
+  font-size: 0.95em;
+}
+
+.salaryInput{
+  display: none;
+}
+.showSalary{
+  display: block;
+  font-size: 0.95em;
+}
+
+.pocketInput{
+  display: none;
+}
+
+.showPocket{
+  display: block;
+  font-size: 0.95em;
+}
+
+.otherIncInput{
+  display: none;
+}
+.showOtherInc{
+  display: block;
+  font-size: 0.95em;
+}
+
+.transRepertoire{
+  display: inline;
+  font-size: 0.7em;
+  max-width: inherit;
+}
+
+#transSpoolBalance{
+  display: block;
+  font-size:0.9em;
+  color:white;
+  max-width: inherit;
+}
+
+.victualsRepertoire{
+  display: inline;
+  font-size: 0.7em;
+  max-width: inherit;
+}
+
+#victualsSpoolBalance{
+  display: block;
+  font-size:0.9em;
+  color:white;
+  max-width: inherit;
+}
+
+.otherExpRepertoire{
+  display: inline;
+  font-size: 0.7em;
+  max-width: inherit;
+}
+
+#otherExpSpoolBalance{
+  display: block;
+  font-size:0.9em;
+  color:white;
+  max-width: inherit;
+}
+
+.salaryRepertoire{
+  display: inline;
+  font-size: 0.7em;
+  max-width: inherit;
+}
+
+#salarySpoolBalance{
+  display: block;
+  font-size:0.9em;
+  color:white;
+  max-width: inherit;
+}
+
+.pocketRepertoire{
+  display: inline;
+  font-size: 0.7em;
+  max-width: inherit;
+}
+
+#pocketSpoolBalance{
+  display: block;
+  font-size:0.9em;
+  color:white;
+  max-width: inherit;
+}
+
+.otherIncRepertoire{
+  display: inline;
+  font-size: 0.7em;
+  max-width: inherit;
+}
+
+#otherIncSpoolBalance{
+  display: block;
+  font-size:0.9em;
+  color:white;
+  max-width: inherit;
+}
+
+
+input[type="date"]:before {
+    content: attr(placeholder) !important;
+    color: #aaa;
+    margin-right: 0.5em;
+  }
+
+
+  input[type="date"]:focus:before,
+  input[type="date"]:valid:before {
+    content: "";
+  }
+
+  input[type=text] {
+    width: auto;
+    height:auto;
+    padding: 1px 1px;
+    margin: 1px 0;
+    border: 1px solid rgb(56,109,177);
+    border-radius: 4px;
+    font-size: 0.95em;
+  }
+
+input[type=date] {
+  width: auto;
+  height:auto;
+  padding: 1px 1px;
+  margin: 1px 0;
+  border: 1px solid rgb(56,109,177);
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+input[type=number] {
+  width: auto;
+  height:auto;
+  padding: 1px 1px;
+  margin: 1px 0;
+  border: 1px solid rgb(56,109,177);
+  border-radius: 4px;
+  font-size: 0.95em;
+}

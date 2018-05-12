@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <title>
+      PiggyBank App
+    </title>
+    <link href = "index.css" type = "text/css" rel = "stylesheet">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="Declaration">
+        You Have
+        <p id="remaining">
+
+        </p>
+        Left
+      </div>
+      <div class="addIncome">
+        <button onclick="showIncomeTypes()"class="addBtnInc">Add Income &#10009
+        </button>
+          <div id="newInc" class="dropdown-inc">
+            <button onclick="newSalary()" id="addSalary">Add Salary</button>
+            <button onclick="newPocket()" id="addPocketMoney">Add Pocket money</button>
+            <button onclick="newOtherInc()" id="addOthIncome">Add Other income</button>
+          </div>
+          <div id="salaryAmount" class="salaryInput">
+            <input id="inputSalary" type="number" value="" placeholder="Input Salary Amount"><input type="text" id="salaryDescription" value="" placeholder="Salary Description"><input type="date" id="salaryDate" value="" placeholder="Date"><button onclick="logSalary()">Add</button><button onclick="hideSalary()">Hide</button>
+          </div>
+          <div id="pocketAmount" class="pocketInput">
+            <input id="inputPocket" type="number" value="" placeholder="Input Pocket Money Amount"><input type="text" id="pocketDescription" value="" placeholder="Pocket Money Description"><input type="date" id="pocketDate" value="" placeholder="Date"><button onclick="logPocket()">Add</button><button onclick="hidePocket()">Hide</button>
+          </div>
+          <div id="otherIncAmount" class="otherIncInput">
+            <input id="inputOtherInc" type="number" value="" placeholder="Input Other Income Amount"><input type="text" id="otherIncDescription" value="" placeholder="Income Description"><input type="date" id="otherIncDate" value="" placeholder="Date"><button onclick="logOtherInc()">Add</button><button onclick="hideOtherInc()">Hide</button>
+          </div>
+      </div>
+      <div class="loggedSalary">
+        <button onclick="spoolSalaryHistory()" class="shwBtnTrns"> Get Salary History</button><input type="date" id="startDateS" value="" placeholder="Start Date"><input type="date" id="endDateS" value="" placeholder="End Date">
+          <div>
+            <ul id="salaryList" class="salaryRepertoire">
+            </ul>
+            <p id="salarySpoolBalance">
+            </p>
+            <button onclick="clearSalaryHistory()" id="" type="button" name="button" >Hide Salary History</button>
+          </div>
+      </div>
+      <div class="loggedPocket">
+        <button onclick="spoolPocketHistory()" class="shwBtnTrns"> Get Pocket Money History</button><input type="date" id="startDateP" value="" placeholder="Start Date"><input type="date" id="endDateP" value="" placeholder="End Date">
+          <div>
+            <ul id="pocketList" class="pocketRepertoire">
+            </ul>
+            <p id="pocketSpoolBalance">
+            </p>
+            <button onclick="clearPocketHistory()" id="" type="button" name="button" >Hide Pocket Money History</button>
+          </div>
+      </div>
+      <div class="loggedOtherInc">
+        <button onclick="spoolOtherIncHistory()" class="shwBtnTrns"> Get Other Income History</button><input type="date" id="startDateI" value="" placeholder="Start Date"><input type="date" id="endDateI" value="" placeholder="End Date">
+          <div>
+            <ul id="otherIncList" class="otherIncRepertoire">
+            </ul>
+            <p id="otherIncSpoolBalance">
+            </p>
+            <button onclick="clearOtherIncHistory()" id="" type="button" name="button" >Hide Other Income History</button>
+          </div>
+      </div>
+      <div class="addExpense">
+        <button onclick="showExpenseTypes()"class="addBtnExp">Add Expense &#10009
+        </button>
+          <div id="newExp" class="dropdown-exp">
+            <button onclick="newTransport()" id="addTransport">Add Transport</button>
+            <button onclick="newVictuals()" id="addVictuals">Add Victuals</button>
+            <button onclick="newOtherExp()" id="addOtherExpense">Add Other Expense</button>
+          </div>
+        <div id="transAmount" class="transInput">
+          <input id="inputTrans" type="number" value="" placeholder="Input Transport Amount"><input type="text" id="transDescription" value="" placeholder="Expense Description"><input type="date" id="transDate" value="" placeholder="Date"><button onclick="logTrans()">Add</button><button onclick="hideTrans()">Hide</button>
+        </div>
+        <div id="victualsAmount" class="victualsInput">
+          <input id="inputVictuals" type="number" value="" placeholder="Input Victuals Amount"><input type="text" id="victualsDescription" value="" placeholder="Expense Description"><input type="date" id="victualsDate" value="" placeholder="Date"><button onclick="logVictuals()">Add</button><button onclick="hideVictuals()">Hide</button>
+        </div>
+        <div id="otherExpAmount" class="otherExpInput">
+          <input id="inputOtherExp" type="number" value="" placeholder="Input Other Expense Amount"><input type="text" id="otherExpDescription" value="" placeholder="Expense Description"><input type="date" id="otherExpDate" value="" placeholder="Date"><button onclick="logOtherExp()">Add</button><button onclick="hideOtherExp()">Hide</button>
+        </div>
+     </div>
+     <div class="loggedTransport">
+       <button onclick="spoolTransportHistory()" class="shwBtnTrns"> Get Transport History</button><input type="date" id="startDateT" value="" placeholder="Start Date"><input type="date" id="endDateT" value="" placeholder="End Date">
+         <div>
+           <ul id="transList" class="transRepertoire">
+           </ul>
+           <p id="transSpoolBalance">
+           </p>
+           <button onclick="clearTransportHistory()" id="" type="button" name="button" >Hide Transport History</button>
+         </div>
+     </div>
+     <div class="loggedVictuals">
+       <button onclick="spoolVictualsHistory()" class="shwBtnTrns"> Get Victuals History</button><input type="date" id="startDateV" value="" placeholder="Start Date"><input type="date" id="endDateV" value="" placeholder="End Date">
+         <div>
+           <ul id="victualsList" class="victualsRepertoire">
+           </ul>
+           <p id="victualsSpoolBalance">
+           </p>
+           <button onclick="clearVictualsHistory()" id="" type="button" name="button" >Hide Victuals History</button>
+         </div>
+     </div>
+     <div class="loggedOtherExp">
+       <button onclick="spoolOtherExpHistory()" class="shwBtnTrns"> Get Other Expense History</button><input type="date" id="startDateO" value="" placeholder="Start Date"><input type="date" id="endDateO" value="" placeholder="End Date">
+         <div>
+           <ul id="otherExpList" class="otherExpRepertoire">
+           </ul>
+           <p id="otherExpSpoolBalance">
+           </p>
+           <button onclick="clearOtherExpHistory()" id="" type="button" name="button" >Hide OtherExpense History</button>
+         </div>
+     </div>
+   </div>
+  </body>
+</html>
